@@ -19,26 +19,26 @@ int main()
     while (true)
     {
         char choice;
-        cout << "Jakie obliczenie chcesz wykonac?" << endl;
-        cout << "1 - Przeliczyc centymetry na cale" << endl;
-        cout << "2 - Przeliczyc centymetry na jardy" << endl;
-        cout << "3 - Przeliczyc centymetry na stopy" << endl;
-        cout << "4 - Przeliczyc centymetry na mile" << endl;
-        cout << "5 - Wyjsc z programu" << endl;
+        cout << "What do you want to do?" << endl;
+        cout << "1 - Convert centimeters to inch" << endl;
+        cout << "2 - Convert centimeters to yards" << endl;
+        cout << "3 - Convert centimeters to foots" << endl;
+        cout << "4 - Convert centimeters to mile" << endl;
+        cout << "5 - Exit" << endl;
         choice = _getch();
 
         if ((choice != '5') && (choice <='5'))
         {
             if (choice == '0')
             {
-                cout << "Nie ma takiej opcji" << endl;
-                cout << endl << "Nacisnij enter by kontunuowac!" << endl;
+                cout << "There's no option" << endl;
+                cout << endl << "Press any key to continue" << endl;
                 getchar();
 
                 system("cls");
                 continue;
             }
-            cout << "Podaj ilosc centymetrow: ";
+            cout << "Enter the number of centimeters: ";
             cin >> centimeters;
         }
 
@@ -46,22 +46,22 @@ int main()
         {
         case '1':
 
-            cout << "Ilosc cali: " << how_many_inch(centimeters) << endl;
+            cout << "Number of inches: " << how_many_inch(centimeters) << endl;
             break;
 
         case '2':
 
-            cout << "Ilosc jardow: " << how_many_yards(centimeters) << endl;
+            cout << "Number of yards: " << how_many_yards(centimeters) << endl;
             break;
 
         case '3':
 
-            cout << "Na stopy: " << how_many_foot(centimeters) << endl;
+            cout << "Number of foots: " << how_many_foot(centimeters) << endl;
             break;
 
         case '4':
 
-            cout << "Na mile: " << how_many_mile(centimeters) << endl;
+            cout << "Number of mile: " << how_many_mile(centimeters) << endl;
             break;
 
         case '5':
@@ -70,11 +70,11 @@ int main()
 
         default: 
             
-            cout << "Nie ma takiej opcji" << endl;
+            cout << "There's no option" << endl;
             break;
         }
 
-        cout << endl << "Nacisnij enter by kontunuowac!" << endl;
+        cout << endl << "Press any key to continue" << endl;
         getchar();
 
         system("cls");
